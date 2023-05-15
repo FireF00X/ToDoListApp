@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize file -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="./css/todo.css">
+    <title>To Do App</title>
+</head>
+
+<body>
+    <div class="back-ground flex-center">
+        <div class="image flex-center">
+            <img src="./images/bg-desktop-dark.jpg" alt="">
+        </div>
+        <div class="all-project flex-center">
+            <!-- start header -->
+            <header class="head flex-center">
+                <h1>TODO</h1>
+                <div class="them dark">
+                    <img src="./images/icon-sun.svg" alt="">
+                </div>
+            </header>
+            <!-- end header -->
+            <!-- start input -->
+            <section class="input flex-center">
+                <div class="check flex-center">
+                    <span></span>
+                </div>
+                <form class="input-field">
+                    <input type="text" placeholder="Creat a new Todo...">
+                </form>
+            </section>
+            <!-- end input -->
+            <!-- start the list -->
+            <ul class="list-items flex-center">
+
+                <!-- start bottom of buttons -->
+                <li>
+                    <ul class="buttons flex-center">
+                        <li class="item-num">0 items left</li>
+                        <li>
+                            <ul class="filter flex-center">
+                                <li class="all chosen">All</li>
+                                <li class="active">Active</li>
+                                <li class="done">Completed</li>
+                            </ul>
+                        </li>
+                        <li class="clear">Clear Completed</li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- end the list -->
+        </div>
+    </div>
+    <script src="./todo.js"></script>
+</body>
+
+</html>

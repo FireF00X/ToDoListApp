@@ -1,0 +1,243 @@
+:root {
+    --dark-body-color: #222;
+    --dark-items-color: hsl(235, 24%, 19%);
+    --blue-hover: hsl(220, 98%, 61%);
+    --dark-txt-color: white;
+    --dark-blue-border: hsl(237, 14%, 26%);
+
+}
+
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--dark-body-color);
+
+}
+
+ul {
+    list-style: none;
+}
+
+/* end global rules */
+/* start reused class */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end reused class  */
+.back-ground {
+    position: relative;
+}
+
+.back-ground .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 350px;
+}
+
+.back-ground .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.back-ground .all-project {
+    width: 600px;
+    flex-direction: column;
+    margin-top: 80px;
+    position: relative;
+}
+@media(max-width:601px){
+    .back-ground .all-project{
+        width: 400px;
+        padding: 0 20px;
+    }
+    li.clear{
+        text-align: center;
+    }
+    li.item-num{
+        text-align: center;
+    }
+}
+.back-ground .all-project .head {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.back-ground .all-project h1 {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 35px;
+}
+.back-ground .all-project .them{
+    cursor: pointer;
+}
+.back-ground .all-project .input {
+    width: 100%;
+    height: 70px;
+    background-color: var(--dark-items-color);
+    position: relative;
+    justify-content: flex-start;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.back-ground .all-project .input .check {
+    background-color: var(--dark-items-color);
+    width: 70px;
+    height: 70px;
+}
+
+.back-ground .all-project .input .check span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-blue-border);
+}
+
+.back-ground .all-project .input .check:hover span {
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+
+.back-ground .all-project .input .input-field {
+    flex: 1;
+}
+
+.back-ground .all-project .input .input-field input {
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    color: var(--dark-txt-color);
+    border: 0;
+    outline: 0;
+}
+
+.back-ground .all-project .list-items {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+    box-shadow: 0 0 10px black;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--dark-items-color);
+
+}
+
+.back-ground .all-project .list-items>li {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: var(--dark-items-color);
+}
+
+.back-ground .all-project .list-items .item {
+    border-bottom: 1px solid var(--dark-blue-border);
+    justify-content: space-between;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.back-ground .all-project .list-items .item .content {
+    color: var(--dark-txt-color);
+}
+
+.back-ground .all-project .list-items .item .delete {
+    display: none;
+    margin-right: 10px;
+}
+
+.back-ground .all-project .list-items .item.checked {
+    margin-left: 20px;
+}
+
+.back-ground .all-project .list-items .item.checked:hover {
+    box-shadow: none;
+    opacity: .5;
+}
+
+.back-ground .all-project .list-items .item.checked .item-txt del {
+    display: block;
+    color: gray;
+}
+
+.back-ground .all-project .list-items .item.checked .item-txt p {
+    display: none;
+}
+
+.back-ground .all-project .list-items .item .item-txt del {
+    display: none;
+}
+
+
+.back-ground .all-project .list-items .item-txt {
+    font-size: 14px;
+}
+
+.back-ground .all-project .list-items .item:hover {
+    position: relative;
+    top: -2px;
+    box-shadow: 0 0 3px black;
+    border-top: 1px solid var(--dark-blue-border);
+
+}
+
+.back-ground .all-project .list-items .item:hover .delete {
+    display: block;
+}
+
+.back-ground .all-project .list-items .item .check span {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    border-radius: 50%;
+    transition: .3s;
+    border: 2px solid var(--dark-blue-border);
+    cursor: pointer;
+}
+
+.back-ground .all-project .list-items .item .check:hover span,
+.back-ground .all-project .list-items .item.checked .check span {
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+
+.back-ground .all-project .list-items .item .check span img {
+    display: none;
+}
+
+.back-ground .all-project .list-items .item.checked .check span img {
+    display: block;
+}
+
+
+.back-ground .all-project .list-items .buttons {
+    justify-content: space-between;
+    color: gray;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.back-ground .all-project .list-items .buttons .filter>li {
+    margin-right: 8px;
+}
+
+.back-ground .all-project .list-items .buttons .filter>li:hover,
+.back-ground .all-project .list-items .buttons .clear:hover,
+.back-ground .all-project .list-items .buttons .filter>li.chosen {
+    color: var(--blue-hover);
+    cursor: pointer;
+}
+
+.back-ground .all-project .list-items .buttons .filter>li:hover {
+    color: var(--dark-txt-color);
+}
